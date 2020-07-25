@@ -39,6 +39,7 @@ class Song
         unique_artists << artist
       end
     end
+    unique_artists
   end
 
   def genre_count
