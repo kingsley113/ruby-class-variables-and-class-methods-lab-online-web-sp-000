@@ -30,7 +30,7 @@ class Song
       end
     end
     unique_genres
-    binding.pry
+    #binding.pry
   end
 
   def self.artists
