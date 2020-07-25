@@ -21,7 +21,13 @@ class Song
   end
 
   def self.genres
-    @@genres
+    unique_genres = []
+    @@genres.each do |genre|
+      if !@@genres.include?(genre)
+        unique_genres << genre
+        unique_genres
+      end
+    end
   end
 
   def self.artists
@@ -33,11 +39,7 @@ class Song
 
 
 
-    unique_genres = []
-    @@genres.each do |genre|
-      if !@@genres.include?(genre)
-        unique_genres << genre
-        unique_genres
+
       end
     end
   end
