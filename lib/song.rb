@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
 
   @@count = 0
@@ -28,6 +30,7 @@ class Song
       end
     end
     unique_genres
+    binding.pry
   end
 
   def self.artists
