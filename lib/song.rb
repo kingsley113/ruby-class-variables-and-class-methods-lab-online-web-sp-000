@@ -30,11 +30,15 @@ class Song
       end
     end
     unique_genres
-    #binding.pry
   end
 
   def self.artists
-    @@artists
+    unique_artists = []
+    @@artists.each do |artist|
+      if !unique_artists.include?(artist)
+        unique_artists << artist
+      end
+    end
   end
 
   def genre_count
