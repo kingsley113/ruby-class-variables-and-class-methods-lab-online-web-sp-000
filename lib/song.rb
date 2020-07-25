@@ -2,6 +2,7 @@ class Song
 
   @@count = 0
   @@genres = []
+  @@artists = []
 
   attr_accessor :name, :artist, :genre
 
@@ -11,10 +12,8 @@ class Song
     @genre = genre
 
     @@count += 1
-
-    #if !@@genres.include?(@genre)
-      @@genres << @genre
-    #end
+    @@genres << @genre
+    @@artists << @artist
   end
 
   def count
@@ -22,6 +21,12 @@ class Song
   end
 
   def genres
-    @@genres
+    unique_genres = []
+    @@genres.each do |genre|
+      if !@@genres.include?(genre)
+        unique_genres << genre
+        unique_genres
+      end
+    end
   end
 end
